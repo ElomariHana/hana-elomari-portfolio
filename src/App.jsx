@@ -1,16 +1,29 @@
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Skills from './components/Skills';
+import Portfolio from './components/Portfolio';
+import WorkExperience from './components/WorkExperience';
+import Education from './components/Education';
+import Contact from './components/Contact';
+import DarkModeToggle from './components/DarkModeToggle';
 
 function App() {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm text-center">
-        <h2 className="text-2xl font-bold text-gray-800">Tailwind Card</h2>
-        <p className="text-gray-600 mt-3">
-            This is a simple card layout built with Tailwind CSS.
-        </p>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-            Learn More
-        </button>
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      <Navbar />
+      <DarkModeToggle />
+      <main>
+        <section id="home" className="min-h-screen flex flex-col justify-center py-12"><Home /></section>
+        <section id="about" className="min-h-screen flex flex-col justify-center py-12"><About /></section>
+        <section id="skills" className="min-h-screen flex flex-col justify-center py-12"><Skills /></section>
+        <section id="portfolio" className="min-h-screen flex flex-col justify-center py-12"><Portfolio /></section>
+        <section id="work" className="min-h-screen flex flex-col justify-center py-12"><WorkExperience /></section>
+        <section id="education" className="min-h-screen flex flex-col justify-center py-12"><Education /></section>
+        <section id="contact" className="min-h-screen flex flex-col justify-center py-12"><Contact /></section>
+      </main>
     </div>
   );
 }
 
-export default App
+export default App;
