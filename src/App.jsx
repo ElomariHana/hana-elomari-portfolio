@@ -6,13 +6,11 @@ import Portfolio from './components/Portfolio';
 import WorkExperience from './components/WorkExperience';
 import Education from './components/Education';
 import Contact from './components/Contact';
-import DarkModeToggle from './components/DarkModeToggle';
 
 function App() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
-      <DarkModeToggle />
       <main>
         <section id="home" className="min-h-screen flex flex-col justify-center py-12"><Home /></section>
         <section id="about" className="min-h-screen flex flex-col justify-center py-12"><About /></section>

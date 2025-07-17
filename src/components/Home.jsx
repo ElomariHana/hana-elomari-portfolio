@@ -12,9 +12,14 @@ const Home = () => (
       <p className="text-gray-600 dark:text-gray-400 max-w-md">
         I build scalable backend services, modern frontend interfaces, and smart integrations. Let's create something amazing together!
       </p>
-      <a href="#contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors text-lg mt-2">
-        Hire Me
-      </a>
+      <div className="flex flex-col sm:flex-row gap-4 mt-2">
+        <a href="#contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors text-lg">
+          Hire Me
+        </a>
+        <a href="/My_Resume.pdf" download className="inline-block bg-white dark:bg-gray-900 border border-yellow-500 text-yellow-600 dark:text-yellow-400 font-bold py-3 px-8 rounded-lg shadow-lg transition-colors text-lg hover:bg-yellow-50 dark:hover:bg-gray-800">
+          Download Resume
+        </a>
+      </div>
     </div>
     {/* Right: Photo with accent */}
     <div className="flex-1 flex justify-center items-center mb-10 md:mb-0 relative w-full md:w-auto">

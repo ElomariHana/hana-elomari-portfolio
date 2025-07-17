@@ -1,5 +1,6 @@
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import DarkModeToggle from './DarkModeToggle';
 
 const contactInfo = [
   {
@@ -26,7 +27,10 @@ const contactInfo = [
 
 const Contact = () => (
   <section className="flex flex-col items-center justify-center min-h-[60vh] py-12">
-    <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-8">Contact Me</h2>
+    <div className="flex items-center gap-4 mb-8">
+      <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">Contact Me</h2>
+      <DarkModeToggle inline={true} />
+    </div>
     <div className="flex flex-col md:flex-row gap-12 w-full max-w-4xl">
       {/* Contact Info */}
       <div className="flex-1 space-y-6">
