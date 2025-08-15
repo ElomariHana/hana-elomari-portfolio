@@ -46,9 +46,9 @@ const cardVariants = {
 };
 
 const Portfolio = () => (
-  <section className="flex flex-col items-center justify-center min-h-[60vh] py-12">
-    <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-8">Portfolio</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+  <section className="flex flex-col items-center justify-center min-h-[60vh] py-8 md:py-12 px-4 md:px-8">
+    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 md:mb-8 text-center">Portfolio</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-6xl">
       {projects.map((project, idx) => (
         <motion.div
           key={idx}
@@ -57,16 +57,16 @@ const Portfolio = () => (
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.2 }}
           variants={cardVariants}
-          whileHover={{ scale: 1.04, boxShadow: '0 8px 32px 0 rgba(0,0,0,0.15)' }}
+          whileHover={{ scale: 1.02, boxShadow: '0 8px 32px 0 rgba(0,0,0,0.15)' }}
         >
-          <img src={project.image} alt={project.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
-          <div className="p-6 flex flex-col flex-1">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-yellow-400 mb-2">{project.title}</h3>
-            <p className="text-gray-700 dark:text-gray-200 mb-4 flex-1">{project.description}</p>
-            <span className="inline-block bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-200 text-xs font-semibold px-3 py-1 rounded-full self-start mb-4">{project.tech}</span>
-            <div className="flex gap-3 mt-auto">
-              <a href={project.live} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg font-semibold shadow transition-colors">Live Demo</a>
-              <a href={project.code} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-100 rounded-lg font-semibold shadow transition-colors">GitHub Code</a>
+          <img src={project.image} alt={project.title} className="w-full h-40 md:h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div className="p-4 md:p-6 flex flex-col flex-1">
+            <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-yellow-400 mb-2">{project.title}</h3>
+            <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 mb-4 flex-1">{project.description}</p>
+            <span className="inline-block bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-200 text-xs font-semibold px-2 md:px-3 py-1 rounded-full self-start mb-4">{project.tech}</span>
+            <div className="flex flex-col sm:flex-row gap-2 md:gap-3 mt-auto">
+              <a href={project.live} target="_blank" rel="noopener noreferrer" className="px-3 md:px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg font-semibold shadow transition-colors text-sm md:text-base text-center">Live Demo</a>
+              <a href={project.code} target="_blank" rel="noopener noreferrer" className="px-3 md:px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-100 rounded-lg font-semibold shadow transition-colors text-sm md:text-base text-center">GitHub Code</a>
             </div>
           </div>
         </motion.div>
