@@ -4,6 +4,7 @@ import About from './components/About';
 import Services from './components/Services';
 import LiveDemos from './components/Portfolio';
 import Contact from './components/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <section id="portfolio" className="min-h-screen flex flex-col justify-center py-12"><LiveDemos /></section>
         <section id="contact" className="min-h-screen flex flex-col justify-center py-12"><Contact /></section>
       </main>
+      <ScrollToTop />
     </div>
   );
 }

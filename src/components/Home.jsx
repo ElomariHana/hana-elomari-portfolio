@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
 const Home = () => (
   <section className="relative flex flex-col-reverse md:flex-row items-center justify-center min-h-[70vh] py-12 px-4 md:px-12 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
@@ -50,7 +51,7 @@ const Home = () => (
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 1 }}
       >
-        I build scalable backend services, robust APIs, and smart integrations. Let’s create something amazing together!
+        I build scalable backend services, robust APIs, and smart integrations. Let's create something amazing together!
       </motion.p>
       <motion.div 
         className="flex flex-col sm:flex-row gap-4 mt-2"
@@ -85,6 +86,31 @@ const Home = () => (
         transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
       >
         HE
+      </motion.div>
+    </motion.div>
+
+    {/* Scroll Indicator */}
+    <motion.div
+      className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 2, duration: 1 }}
+    >
+      <motion.div
+        className="flex flex-col items-center text-gray-600 dark:text-gray-400 cursor-pointer"
+        onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+      >
+        <span className="text-xs md:text-sm mb-1 md:mb-2 font-medium">Scroll Down</span>
+        <div className="w-4 h-7 md:w-6 md:h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center">
+          <motion.div
+            className="w-0.5 md:w-1 h-2 md:h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-1 md:mt-2"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+          />
+        </div>
+        <ChevronDownIcon className="w-4 h-4 md:w-5 md:h-5 mt-1 md:mt-2 text-yellow-500" />
       </motion.div>
     </motion.div>
   </section>
