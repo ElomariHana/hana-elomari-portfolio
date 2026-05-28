@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
+const resumeUrl = `${import.meta.env.BASE_URL}Hana_El_Omari_Resume.pdf`;
+
 const Home = () => (
   <section className="relative flex flex-col-reverse md:flex-row items-center justify-center min-h-[70vh] py-12 px-4 md:px-12 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
 
@@ -62,7 +64,7 @@ const Home = () => (
         <a href="#contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors text-lg">
           Hire Me
         </a>
-        <a href="/My_Resume.pdf" download className="inline-block bg-white dark:bg-gray-900 border border-yellow-500 text-yellow-600 dark:text-yellow-400 font-bold py-3 px-8 rounded-lg shadow-lg transition-colors text-lg hover:bg-yellow-50 dark:hover:bg-gray-800">
+        <a href={resumeUrl} download="Hana_El_Omari_Resume.pdf" className="inline-block bg-white dark:bg-gray-900 border border-yellow-500 text-yellow-600 dark:text-yellow-400 font-bold py-3 px-8 rounded-lg shadow-lg transition-colors text-lg hover:bg-yellow-50 dark:hover:bg-gray-800">
           Download Resume
         </a>
       </motion.div>
