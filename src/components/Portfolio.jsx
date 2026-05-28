@@ -5,9 +5,9 @@ const projects = [
   {
     title: 'LISA - AI Virtual Try-On Shopify App',
     description:
-      'Shopify embedded app that lets customers virtually try on clothing with AI image processing. Built with Shopify OAuth, Admin GraphQL API, multi-tenant merchant isolation, and zero-setup installation.',
+      'AI-powered Shopify app that lets customers upload a photo and virtually try on clothing, with theme extensions, merchant credits, billing, analytics, and admin settings.',
     image: 'https://img.youtube.com/vi/UN4a8HQ4oI4/hqdefault.jpg',
-    tech: 'Laravel, Shopify API, AI Vision API, GraphQL, Vue.js, Docker, PostgreSQL',
+    tech: 'Laravel 11, React, Vite, Shopify APIs, Liquid, AWS S3, Fal.ai, MySQL',
     live: 'https://www.youtube.com/watch?v=UN4a8HQ4oI4&t=108s',
     code: '#',
     privateCode: true,
